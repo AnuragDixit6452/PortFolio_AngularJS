@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/angular.min.js"></script>
+    <link rel="icon" href="/icons/profile.svg">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <title>AD Portfolio | Include Functionality</title>
+</head>
+
+<body ng-app="">
+    <header class="main-head">
+        <nav>
+            <div class="logo">
+                <img src="/icons/code.svg" alt="Coder">
+                <h1>Mr. AD's Portfolio</h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="/projects/Functions.html" class="active">Functions</a></li>
+                <li><a href="../Contacts/contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hobbies-cont">
+        <form>
+            <h2> Choose your options:
+                <select name="subject" id="college" ng-model="switch">
+                    <option value="Sport">Sports
+                    </option>
+                    <option value="Music">Music</option>
+                </select>
+            </h2>
+        </form>
+
+        <div ng-switch="switch">
+            <div ng-switch-when="Sport">
+                <div ng-include="'Sport.html'"></div>
+            </div>
+            <div ng-switch-when="Music">
+                <div ng-include="'music.html'"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4> A N U R A G &nbsp;&nbsp;&nbsp; D I X I T &copy; &nbsp;&nbsp;&nbsp; 2021</h4>
+        <ul>
+            <li>
+                <a href="https://twitter.com/AnuragD90222585"><img src="../icons/twitter.svg" alt="twitter"></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/anurag_dixit07/"><img src="../icons/instagram.svg" alt="insta"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=100006445667752"><img src="../icons/fb.svg" alt=""></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

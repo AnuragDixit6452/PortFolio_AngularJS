@@ -1,0 +1,142 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$background-color: #154353;
+$gray-text: #2c2c2c;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@import "global";
+@import "intro";
+@import "functions";
+@import "contact";
+@import "footer";
+@import "search";
+@import "mouse";
+@import "textPlay";
+@import "hobbies";
+@media screen and (max-width: 1490px) {
+  svg {
+    width: 80%;
+  }
+  .splash {
+    display: none;
+  }
+  nav {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  html {
+    font-size: 60%;
+  }
+  .splash {
+    display: none;
+  }
+  svg {
+    width: 80%;
+  }
+  nav {
+    width: 100%;
+  }
+  textarea {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 754px) {
+  html {
+    font-size: 50%;
+  }
+  .splash {
+    display: none;
+  }
+  svg {
+    height: 60%;
+  }
+  .main-head {
+    width: 100%;
+  }
+  nav {
+    .logo {
+      @include flex(center, center, column);
+      flex: 1 1 20rem;
+      margin-top: 2rem;
+    }
+    ul {
+      flex: 1 1 60rem;
+      margin: 2rem 0rem;
+    }
+  }
+  .intro {
+    margin-right: 2rem;
+  }
+  .intro-text {
+    font-size: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .intro-images {
+    text-align: center;
+  }
+  .intro-social {
+    @include flex(center, center, row);
+    a {
+      margin: 2rem;
+    }
+  }
+  form {
+    padding: 0%;
+    width: 100%;
+  }
+  footer {
+    h4 {
+      @include flex(center, center, row);
+    }
+  }
+  textarea {
+    font-size: 1rem;
+  }
+  .Contact {
+    padding: 0rem 0rem;
+    margin-right: 0rem 0rem;
+    text-align: center;
+  }
+  .form-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  label,
+  input {
+    margin-right: 4rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 754px) {
+  .mouse-cards {
+    margin: 0rem;
+  }
+  .cardm {
+    padding: 0;
+    margin: 0;
+    .img1,
+    .img2,
+    .img3 {
+      height: 300px;
+      width: 100%;
+    }
+  }
+  textarea {
+    margin: 0;
+    font-size: 1rem;
+    width: 100%;
+  }
+}

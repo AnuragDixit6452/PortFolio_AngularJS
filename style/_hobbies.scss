@@ -1,0 +1,55 @@
+.hobbies-cont {
+  min-height: 75vh;
+  h2 {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+}
+.cricket {
+  min-height: 60vh;
+  background: url("/img/cricket.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-position: top;
+}
+
+.cricket-text {
+  @include flex(center, center, row);
+  p {
+    margin: 10rem;
+    padding: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+    align-items: center;
+  }
+}
+
+.music {
+  min-height: 60vh;
+  background: url("/img/music.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-position: top;
+}
+
+.music-text {
+  @include flex(center, center, row);
+  p {
+    margin: 10rem;
+    padding: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+    align-items: center;
+  }
+}

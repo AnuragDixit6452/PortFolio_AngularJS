@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/angular.min.js" type="text/javascript"></script>
+    <link rel="icon" href="/icons/profile.svg">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <title>AD Portfolio | Ng-Directive Function</title>
+    <style>
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .strike {
+            text-decoration: line-through;
+        }
+    </style>
+
+</head>
+
+<body ng-app="">
+    <header class="main-head">
+        <nav>
+            <div class="logo">
+                <img src="/icons/code.svg" alt="Coder">
+                <h1>Mr. AD's Portfolio</h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="Functions.html" class="active">Functions</a></li>
+                <li><a href="../Contacts/contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="text-info">
+        <h2>Play around with Text!!</h2>
+    </div>
+    <form class="text-play">
+        <textarea rows="3" cols="50" ng-class="{strike:strike , bold:bold , italic:italic }" ng-style="{color:switch}"
+            ng-model="text"></textarea><br><br>
+        <label><input type="checkbox" ng-model="strike">&nbsp;Strike&nbsp;</label>
+        <label><input type="checkbox" ng-model="bold">&nbsp;Bold&nbsp;</label>
+        <label><input type="checkbox" ng-model="italic">&nbsp;Italic&nbsp;</label><br><br>
+        <select name="color" ng-model="switch">
+            <option value="red">Red</option>
+            <option value="blue" selected>Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+    </form>
+    <footer>
+        <h4> A N U R A G &nbsp;&nbsp;&nbsp; D I X I T &copy; &nbsp;&nbsp;&nbsp; 2021</h4>
+        <ul>
+            <li>
+                <a href="https://twitter.com/AnuragD90222585"><img src="../icons/twitter.svg" alt="twitter"></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/anurag_dixit07/"><img src="../icons/instagram.svg" alt="insta"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=100006445667752"><img src="../icons/fb.svg" alt=""></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

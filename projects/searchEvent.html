@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/angular.min.js" type="text/javascript"></script>
+    <link rel="icon" href="/icons/profile.svg">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <title>AD Portfolio | Search Function</title>
+</head>
+
+<body>
+    <header class="main-head">
+        <nav>
+            <div class="logo">
+                <img src="/icons/code.svg" alt="Coder">
+                <h1>Mr. AD's Portfolio</h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects/Functions.html" class="active">Functions</a></li>
+                <li><a href="../Contacts/contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cont">
+        <div ng-app="mySearch" ng-controller="mySearchController">
+            <h2>{{txt}}</h2><br>
+            <p>Enter your Fav Movie to see if i match with ur movie taste : <input type="text" ng-model="search"><br>
+            </p>
+            <div class="list">
+                <ul>
+                    <h1>DRAMMA/FICTION</h1>
+                    <li ng-repeat="x in myArr|filter:search">
+                        {{x}}
+                    </li>
+                </ul>
+                <ul>
+                    <h1>MARVEL UNIVERSE</h1>
+                    <li ng-repeat="x1 in myArr1|filter:search">
+                        {{x1}}
+                    </li>
+                </ul>
+                <ul>
+                    <h1>HORROR</h1>
+                    <li ng-repeat="x2 in myArr2|filter:search">
+                        {{x2}}
+                    </li>
+                </ul>
+                <ul>
+                    <h1>BOLLYWOOD</h1>
+                    <li ng-repeat="x3 in myArr3|filter:search">
+                        {{x3}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4> A N U R A G &nbsp;&nbsp;&nbsp; D I X I T &copy; &nbsp;&nbsp;&nbsp; 2021</h4>
+        <ul>
+            <li>
+                <a href="https://twitter.com/AnuragD90222585"><img src="../icons/twitter.svg" alt="twitter"></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/anurag_dixit07/"><img src="../icons/instagram.svg" alt="insta"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=100006445667752"><img src="../icons/fb.svg" alt=""></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+<script>
+    angular.module("mySearch", []).controller("mySearchController", function ($scope) {
+        $scope.txt = "Welcome to my Favourites Movie List!!! ";
+        $scope.myArr = ["Intestellar", "Inception", "Tenet", "Titanic", "The Dark Knight", "The Dark Knight Rises", "GodFather", "Ben-Hur", "JoJo Rabbit", "Joker"];
+        $scope.myArr1 = ["Thor-Ragnarok", "Avengers", "Dr.Strange", "Iron Man", "Captain Marvel", "SpiderMan", "Civil War", "Black Panther", "HULK", "Avengers End Game"];
+        $scope.myArr2 = ["The Exorcist (1973)", "Exorcism of Emily Rose", "The Conjuring", "Insidious", "Haunted 1920", "Bhool Bhulaiya", "Krishna Cottage", "The NuN", "I.T.", "Bulbul"];
+        $scope.myArr3 = ["3 Idiots", "Taare Zameen Par", "Sholay", "Badshah", "DDLJ", "Masaan", "Coolie No.1", "Bhaag Milkha Bhaag", "Rang De Basanti", "Chak De India"];
+    });
+</script>

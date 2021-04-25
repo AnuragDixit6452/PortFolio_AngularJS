@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mouse-main-container {
+  min-height: 73.8vh;
+  h1 {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 4rem;
+  }
+  h2 {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .rad {
+    padding: 0;
+    margin-top: 1rem;
+    .rad1,
+    .rad2,
+    .rad3 {
+      text-align: center;
+    }
+    input {
+      cursor: pointer;
+      :hover {
+        color: $background-color;
+      }
+    }
+    @include flex(space-evenly, center, row);
+  }
+}
+
+.mouse-cards {
+  margin: 5rem;
+  @include flex(space-, center, row);
+  flex: 1 1 40rem;
+}
+
+.cardm {
+  @include flex(space-around, center, column);
+  .img1,
+  .img2,
+  .img3 {
+    cursor: pointer;
+    height: 400px;
+    width: 400px;
+
+    box-shadow: 0px 10px 10px rgba($color: #000000, $alpha: 0.2),
+      2px 20px 20px rgba($color: #000000, $alpha: 0.2);
+  }
+  .img1:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border: 5px solid $background-color;
+    border-radius: 8px;
+  }
+  .img2:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border: 5px solid $background-color;
+    border-radius: 8px;
+  }
+  .img3:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border: 5px solid $background-color;
+    border-radius: 8px;
+  }
+  padding: 2rem 5rem;
+  text-align: center;
+  min-height: 40vh;
+  flex: 1 1 40rem;
+  h5 {
+    padding: 2rem 5rem;
+  }
+}
